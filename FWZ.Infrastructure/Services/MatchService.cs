@@ -19,7 +19,6 @@ namespace FWZ.Infrastructure.Services
 
         // dependency injecting object RiotApiConfig to access the value in appsetting.json
         private readonly RiotApiConfig _config;
-
         public MatchService(IHttpClientFactory httpClientFactory, IOptions<RiotApiConfig> options) //IOptions navigates through appsetting
         {
             _httpClientFactory = httpClientFactory;
