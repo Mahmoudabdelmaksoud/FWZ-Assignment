@@ -24,7 +24,6 @@ namespace FWZ.Infrastructure.Services
             _httpClientFactory = httpClientFactory;
             _config = options.Value; //Key value pairs
         }
-
         public async Task<IEnumerable<PlayerDto>> GetParsedMatchAsync(string MatchId)
         {
             //Generate request (http client) of Riot Kind
