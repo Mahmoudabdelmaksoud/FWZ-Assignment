@@ -1,0 +1,128 @@
+﻿body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background: url('images/lol-bg.jpg') center/cover no-repeat fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background: linear-gradient(135deg, #1e1e2f, #2e2b4f);
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    overflow-x: auto;
+    transition: max-width 0.4s ease;
+}
+
+h1 {
+    color: #ffd700;
+    margin-bottom: 25px;
+    font-family: 'Cinzel', serif;
+    font-size: 28px;
+    white-space: nowrap;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+    .controls label {
+        color: #b3003b;
+        font-weight: bold;
+        font-size: 14px;
+        text-align: left;
+        width: 100%;
+    }
+
+    .controls input, .controls select {
+        width: 100%;
+        padding: 10px;
+        border-radius: 8px;
+        border: none;
+        font-size: 14px;
+    }
+
+    .controls button {
+        padding: 12px 25px;
+        background-color: #9b59b6;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+        .controls button:hover {
+            background-color: #8e44ad;
+        }
+
+.loader {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #ffd700;
+}
+
+table {
+    width: 100%;
+    max-width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    color: #fff;
+    font-size: 14px;
+    background-color: rgba(0,0,0,0.5);
+    table-layout: fixed;
+    word-wrap: break-word;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #444;
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: rgba(255,255,255,0.05);
+}
+
+tr:hover {
+    background-color: rgba(255,255,255,0.1);
+}
+
+th.team-title-blue {
+    background-color: #3498db;
+    color: white;
+}
+
+th.team-title-red {
+    background-color: #e74c3c;
+    color: white;
+}
+
+th.column-header-blue {
+    background-color: #5dade2;
+    color: #003366;
+}
+
+th.column-header-red {
+    background-color: #f1948a;
+    color: #660000;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    table, th, td {
+        font-size: 12px;
+    }
+}

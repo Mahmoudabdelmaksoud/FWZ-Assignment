@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LoL Match Stats</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>League of Legends Match Stats</h1>
+
+        <div class="controls">
+            <label for="matchId">Match ID:</label>
+            <input type="text" id="matchId" placeholder="Enter Match ID">
+
+            <label for="playerNumber">Player Number:</label>
+            <select id="playerNumber">
+                <option value="">All</option>
+            </select>
+
+            <button onclick="fetchMatch()">Show Stats</button>
+        </div>
+
+        <div class="loader" id="loader" style="display:none;">Loading...</div>
+
+        <table id="blueTable" style="display:none;">
+            <thead>
+                <tr class="team-header">
+                    <th colspan="9" class="team-title-blue">Blue Team</th>
+                </tr>
+                <tr class="column-header column-header-blue">
+                    <th>Summoner</th>
+                    <th>Champion</th>
+                    <th>Gold</th>
+                    <th>K</th>
+                    <th>D</th>
+                    <th>A</th>
+                    <th>CS</th>
+                    <th>Damage Dealt</th>
+                    <th>Damage Taken</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <table id="redTable" style="display:none; margin-top:20px;">
+            <thead>
+                <tr class="team-header">
+                    <th colspan="9" class="team-title-red">Red Team</th>
+                </tr>
+                <tr class="column-header column-header-red">
+                    <th>Summoner</th>
+                    <th>Champion</th>
+                    <th>Gold</th>
+                    <th>K</th>
+                    <th>D</th>
+                    <th>A</th>
+                    <th>CS</th>
+                    <th>Damage Dealt</th>
+                    <th>Damage Taken</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
